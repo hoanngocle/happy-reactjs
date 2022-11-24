@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import ColorBox from './components/ColorBox';
+import Counter from './components/Counter';
 import GirlFeature from './features/Girl';
 import TodoFeature from './features/Todo';
 
@@ -55,6 +57,8 @@ function App() {
       </header> */}
       {/* <TodoFeature /> */}
       <GirlFeature />
+      <ColorBox/>
+      <Counter />
     </div>
   );
 }
