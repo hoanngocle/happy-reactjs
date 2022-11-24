@@ -1,10 +1,24 @@
 import React from 'react';
 import './App.css';
 import ColorBox from './components/ColorBox';
-import Counter from './components/Counter';
+import Counter from './components/ColorBox';
 import GirlFeature from './features/Girl';
+import TodoFeature from './features/Todo';
 
 function App() {
+  const name = 'Emilia';
+  const age = 28;
+  const isMale = true;
+  const student = {
+    name: "Hayd"
+  };
+
+  const colorList = [
+    'red',
+    'blue',
+    'green'
+  ];
+  
   return (
     <div className="App">
       {/* <header className="App-header">
