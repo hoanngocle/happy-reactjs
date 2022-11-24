@@ -1,6 +1,6 @@
-import logo from './logo.svg';
-import './App.css';
 import React from 'react';
+import './App.css';
+import GirlFeature from './features/Girl';
 import TodoFeature from './features/Todo';
 
 function App() {
@@ -53,7 +53,8 @@ function App() {
           ))}
         </ul>
       </header> */}
-      <TodoFeature />
+      {/* <TodoFeature /> */}
+      <GirlFeature />
     </div>
   );
 }
