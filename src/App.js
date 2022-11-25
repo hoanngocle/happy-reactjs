@@ -55,10 +55,10 @@ function App() {
           ))}
         </ul>
       </header> */}
-      {/* <TodoFeature /> */}
-      <GirlFeature />
-      <ColorBox/>
-      <Counter />
+      <TodoFeature />
+      {/* <GirlFeature /> */}
+      {/* <ColorBox/> */}
+      {/* <Counter /> */}
     </div>
   );
 }
