@@ -46,10 +46,20 @@ function TodoFeature(props) {
     setTodoList(newTodoList);
   }
 
+  const handleShowAll = () => { }
+  const handleShowCompleted = () => { }
+  const handleShowNew = () => { }
+
   return (
     <div>
       <h3>Todo List</h3>
       <TodoList todoList={todoList} onTodoClick={handleTodoClick} />
+
+      <div>
+        <button onClick={ }>Show All</button>
+        <button onClick={ }>Show Completed</button>
+        <button onClick={ }>Show New</button>
+      </div>
     </div>
   );
 }
