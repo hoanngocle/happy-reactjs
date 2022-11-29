@@ -1,4 +1,5 @@
 import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import ColorBox from './components/ColorBox';
 import Counter from './components/ColorBox';
@@ -55,8 +56,11 @@ function App() {
           ))}
         </ul>
       </header> */}
-      <TodoFeature />
-      {/* <GirlFeature /> */}
+      Home Page
+      <Routes>
+        <Route path="/todos" element={<TodoFeature/>}/>
+        <Route path="/girls" element={<GirlFeature/>}/>
+      </Routes>
       {/* <ColorBox/> */}
       {/* <Counter /> */}
     </div>
