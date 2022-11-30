@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Link, NavLink, Route, Routes } from 'react-router-dom';
 import './App.css';
 import ColorBox from './components/ColorBox';
 import Counter from './components/ColorBox';
@@ -19,7 +19,7 @@ function App() {
     'blue',
     'green'
   ];
-  
+
   return (
     <div className="App">
       {/* <header className="App-header">
@@ -57,9 +57,15 @@ function App() {
         </ul>
       </header> */}
       Home Page
+      <p><Link to="todos">Todos</Link></p>
+      <p><Link to="girls">Girls</Link></p>
+
+      <p><NavLink to="todos">Nav Todos</NavLink></p>
+      <p><NavLink to="girls">Nav Girls</NavLink></p>
+
       <Routes>
-        <Route path="/todos" element={<TodoFeature/>}/>
-        <Route path="/girls" element={<GirlFeature/>}/>
+        <Route path="/todos" element={<TodoFeature />} />
+        <Route path="/girls" element={<GirlFeature />} />
       </Routes>
       {/* <ColorBox/> */}
       {/* <Counter /> */}
