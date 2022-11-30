@@ -22,48 +22,13 @@ function App() {
 
   return (
     <div className="App">
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello {name}!
-        </p>
-        <p>Xin chao {name} - {age} - {isMale ? 'Male': 'Female'}</p>
-        {isMale ? <p>Male</p> : <p>Female</p>}
-
-        {isMale && (
-          <React.Fragment>
-          <p>Male</p>
-          <p>Male</p>
-          <p>Male</p>
-          </React.Fragment>
-        )}
-
-
-        {isMale && (
-          <>
-          <p>Male</p>
-          <p>Male</p>
-          <p>Male</p>
-          </>
-        )}
-
-        <p>{student.name}      </p>
-
-        <p>{colorList}</p>
-        <ul>
-          {colorList.map(color => (
-            <li style={{ color }}>{color}</li>
-          ))}
-        </ul>
-      </header> */}
       Home Page
-      <p><Link to="todos">Todos</Link></p>
-      <p><Link to="girls">Girls</Link></p>
 
       <p><NavLink to="todos">Nav Todos</NavLink></p>
       <p><NavLink to="girls">Nav Girls</NavLink></p>
 
       <Routes>
+        <Route path='/' element={<TodoFeature/>}/>
         <Route path="/todos" element={<TodoFeature />} />
         <Route path="/girls" element={<GirlFeature />} />
       </Routes>
