@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, NavLink, Route, Routes } from 'react-router-dom';
+import { Route, Switch, Redirect, NavLink } from 'react-router-dom';
 import './App.css';
 import ColorBox from './components/ColorBox';
 import Counter from './components/ColorBox';
@@ -11,14 +11,10 @@ function App() {
   const age = 28;
   const isMale = true;
   const student = {
-    name: "Hayd"
+    name: 'Hayd'
   };
 
-  const colorList = [
-    'red',
-    'blue',
-    'green'
-  ];
+  const colorList = ['red', 'blue', 'green'];
 
   return (
     <div className="App">
@@ -57,16 +53,25 @@ function App() {
         </ul>
       </header> */}
       Home Page
-      <p><Link to="todos">Todos</Link></p>
-      <p><Link to="girls">Girls</Link></p>
+      <p>
+        <NavLink to={'/todos'} activeClassName="active-menu">
+          Todos
+        </NavLink>
+      </p>
+      <p>
+        <NavLink to={'/girls'} activeClassName="active-menu">
+          Girls
+        </NavLink>
+      </p>
+      <Switch>
+        {/* <Redirect from="/home" to="/" /> */}
+        <Redirect from="/home" to="/" />
+        <Redirect from="/post-list/:postId" to="/posts/:postId" exact />
 
-      <p><NavLink to="todos">Nav Todos</NavLink></p>
-      <p><NavLink to="girls">Nav Girls</NavLink></p>
-
-      <Routes>
-        <Route path="/todos" element={<TodoFeature />} />
-        <Route path="/girls" element={<GirlFeature />} />
-      </Routes>
+        <Route path="/" component={TodoFeature} exact />
+        <Route path="/todos" component={TodoFeature} />
+        <Route path="/girls" component={GirlFeature} />
+      </Switch>
       {/* <ColorBox/> */}
       {/* <Counter /> */}
     </div>
