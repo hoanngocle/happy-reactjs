@@ -3,6 +3,7 @@ import { Route, Switch, Redirect, NavLink } from 'react-router-dom';
 import './App.css';
 import GirlFeature from './features/Girl';
 import TodoFeature from './features/Todo';
+import NotFound from './components/NotFound';
 
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
         <Route path="/" component={TodoFeature} exact />
         <Route path="/todo-list" component={TodoFeature} />
         <Route path="/girls" component={GirlFeature} />
+
+        <Route component={NotFound} />
       </Switch>
     </div>
   );
