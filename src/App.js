@@ -10,22 +10,43 @@ function App() {
     <div className="App">
       Home Page
       <p>
-        <NavLink to={'/todos'} activeClassName="active-menu">
+        <NavLink
+          to={'/todos'}
+          activeClassName="active-menu">
           Todos
         </NavLink>
       </p>
       <p>
-        <NavLink to={'/girls'} activeClassName="active-menu">
+        <NavLink
+          to={'/girls'}
+          activeClassName="active-menu">
           Girls
         </NavLink>
       </p>
       <Switch>
-        <Redirect from="/home" to="/" />
-        <Redirect from="/post-list/:postId" to="/posts/:postId" exact />
+        <Redirect
+          from="/home"
+          to="/"
+        />
+        <Redirect
+          from="/post-list/:postId"
+          to="/posts/:postId"
+          exact
+        />
 
-        <Route path="/" component={TodoFeature} exact />
-        <Route path="/todo-list" component={TodoFeature} />
-        <Route path="/girls" component={GirlFeature} />
+        <Route
+          path="/"
+          component={TodoFeature}
+          exact
+        />
+        <Route
+          path="/todo-list"
+          component={TodoFeature}
+        />
+        <Route
+          path="/girls"
+          component={GirlFeature}
+        />
 
         <Route component={NotFound} />
       </Switch>
